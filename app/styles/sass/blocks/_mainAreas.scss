@@ -1,0 +1,122 @@
+.main-areas{ 
+    padding-top: 10vh;
+}
+
+.main-areas-dignity{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    padding-bottom: 20vh;
+}
+
+.main-areas-dignity_elem{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: $userfont-reg;
+    line-height: 1.2;
+    img{
+        max-height:50px;
+        max-width: 65px;
+        margin-bottom: 2vh;
+    }
+    span{
+        font-size: 18px;
+    }
+}
+
+.main-areas-dignity_elem-title{
+    font-size: 24px;
+    margin-bottom: 2vh;
+}
+
+.areas {
+    overflow: hidden;;
+    margin-left: -1%;
+    margin-top: -20px;
+    background-image: url(../../../images/dist/bg-svg.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+[data-area]{
+    transition: all .4s ease; 
+    opacity: 0.2;
+    cursor: pointer;
+}
+
+.area_active {
+    opacity: 0.5;
+}
+//CARD
+
+.card-area{
+    display: none;
+    z-index: 11;
+    position: absolute;
+    top: 1500px;
+    left: 500px;
+    width: 250px;
+    height: 200px;
+    border-radius: 15px;
+    background: rgba(152, 152, 152, 0.25);
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(15px);
+    font-size: 14px;
+    font-family: $userfont-lg;
+    padding: 15px 20px;
+    color: $background;
+    line-height: 1.5;
+    span{
+        font-family: $userfont-med;
+        font-weight: bold;
+        float: right;
+    }
+    transition: opacity .4s ease;
+}
+
+.card-area_container{
+    display: flex;
+    flex-direction: column;
+}
+
+.card-area_title{
+    font-family: $userfont-med;
+    font-size: 16px;
+}
+
+.card-area_content{
+    margin-top: 15px;
+    height: 100px;    
+}
+
+.card-area-content-field{
+
+}
+
+.btn-more{
+    flex-shrink: 0;
+    padding: 5px 10px;
+    color: $background;
+    border-color: $background;
+    transition: background .4s ease, border-color .4s ease;
+}
+
+.btn-more:hover{
+    border-color: $textcolor;
+    background: $textcolor;
+}
+
+.b-show {
+    display: block;
+    animation: showBlock .4s linear forwards;
+  }
+@keyframes showBlock {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }

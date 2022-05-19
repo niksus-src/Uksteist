@@ -1,0 +1,89 @@
+// USER VARIABLES SECTION
+
+$accent: #314C51 // Accent Color
+$fontsize: 18px // Body Font Size
+$head-size: 64px
+$textcolor: #1D1F1D // Text Color
+$background: #F8F8F8
+$textcolor-gray: #CFD3D0
+$gray: #858685
+$container: 1252px
+
+$lineheight: 1.2 // Document Line Height
+$userfont-lg: montser-light, sans-serif // User Font Family
+$userfont-reg: montser-reg, sans-serif // User Font Family
+$userfont-med: montser-medium, sans-serif // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px
+$gutter: $grid-gutter-width
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/_utilities.scss' // Optional Bootstrap Utilites
+
+// FONTS LOAD SECTION
+
+@mixin font($fname, $fstyle, $fweight, $furl)
+	@font-face
+		font-family: $fname
+		font-style: $fstyle
+		font-weight: $fweight
+		src: url($furl) format('woff2')
+
+@include font('montser-light', normal, 300, '../fonts/Montserrat-Light.woff2')
+@include font('montser-reg', normal, 400, '../fonts/Montserrat-Regular.woff2')
+@include font('montser-medium', normal, 500, '../fonts/Montserrat-Medium.woff2')
+
+// GENERAL CSS SETTINGS
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	background: $background
+	font-family: $userfont-lg
+	font-size: $fontsize
+	line-height: $lineheight
+	color: $textcolor
+	min-width: 320px
+	position: relative
+	overflow-x: hidden
+
+.container 
+	max-width: $container
+
+a 
+	font-family: $userfont-reg
+	color: $textcolor
+	text-decoration: none
+a:hover 
+	color: $accent
+	text-decoration: underline
+
+.button 
+	width: 100%
+	outline: none
+	border: 1px solid $textcolor
+	border-radius: 30px
+	padding: 20px 30px
+	background: transparent
+	font-family: $userfont-lg
+	line-height: 0.9
+	font-size: $fontsize
+

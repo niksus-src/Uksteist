@@ -1,0 +1,110 @@
+@include media-breakpoint-down(sm) { 
+    
+    .button {
+        padding: 10px 10px !important;
+    }
+
+ }
+@include media-breakpoint-down(md) { 
+    .navbar-menu{
+        display: none !important;
+    }
+    .navbar {
+        display: none !important;
+    }
+    .main-title_bg video {
+        height: 200px;
+    }
+    .main-title_number {
+        line-height: normal;
+    }
+    .main-title {
+        padding: 0;
+    }
+    .main-title-content {
+        text-align: center;
+    }
+    .main-title_text {
+        font-size: 36px;
+    }
+    .button {
+        padding: 15px 25px
+    }
+    .main-title_button {
+        display: flex;
+        justify-content: center;
+    }
+    .main-title_number {
+        font-size: 400px;
+    }
+    .main-title_number {
+        font-size: 182px !important;
+    }
+
+
+    .main-areas{
+        padding-top: 100px;
+    }
+    .main-areas-dignity{
+        flex-direction: column;
+        span{
+            font-size: 16px;
+        }
+    }
+    .main-areas-dignity_elem{
+        margin-bottom: 30px;
+    }
+    .main-areas-dignity_elem-title{
+        font-size: 18px;
+    }
+    //Card 
+    .card-area{
+        z-index: 11;
+        position: absolute;
+        width: 200px;
+        height: auto;
+        border-radius: 15px;
+        background: rgba(152, 152, 152, 0.25);
+        box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.15);
+        backdrop-filter: blur(15px);
+        font-size: 12px;
+        font-family: $userfont-lg;
+        padding: 10px 15px;
+        color: $background;
+        line-height: 1.2;
+        span{
+            font-size: 12px;
+        }
+    }
+    
+    .card-area_title{
+        font-size: 14px;
+    }
+    
+    .card-area_content{ 
+        height: auto;
+    }
+    
+    .btn-more{
+        margin-top: 5px;
+        padding: 5px 10px !important;
+        font-size: 12px;
+    }
+ }
+@include media-breakpoint-down(lg) { 
+
+ }
+@include media-breakpoint-down(xl) {
+    .main-title_number {
+        font-size: 400px;
+    }
+ }
+@include media-breakpoint-down(xxl) { 
+
+ }
+
+ @include media-breakpoint-up(md) { 
+    .navbar-sm {
+        display: none !important;
+    }
+ }

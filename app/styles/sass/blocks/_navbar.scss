@@ -1,0 +1,252 @@
+.navbar {
+    max-width: $container;
+}
+.navbar-top {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-bottom: 50px;
+    z-index: 10;
+}
+
+.navbar-top_block {
+    display: flex;
+}
+
+.navbar-top_block-icon{
+    margin-right: 25px;
+}
+
+.navbar-top_block-icon:nth-child(even) {
+    margin-right: 0;
+}
+
+.navbar-top_block-logo {
+    background-image: url(../../../images/dist/logo.svg);
+    background-repeat: no-repeat;
+    width: 75px;
+    height: 65px;
+}
+
+.navbar-top_block-lang_select {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    outline-offset: 0;
+    background-color: transparent;
+    width: 50px;
+    font-size: 14px;
+    font-family: $userfont-reg;
+}
+
+.icon-img {
+    width: 100%;
+}
+
+.navbar-menu {
+    background: $background;
+    z-index: 10;
+    position: absolute;
+    top: 102px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid $gray;
+    border-bottom: 1px solid $gray;
+}
+
+.nav-top {
+    top: 0px;
+    position: fixed;
+}
+
+.nav-down {
+    position: absolute;
+}
+
+.navbar-menu_anchor {
+    font-size: 14px;
+    padding: 0 20px;
+}
+
+// Navbar Mobile
+
+.navbar-mob {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: $background;
+}
+
+.navbar-mob_top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-mob_logo {
+    width: 70px;
+}
+
+.navbar-mob_content {
+    display: flex;
+    flex-direction: column;
+    margin: 25px 0;
+}
+
+.navbar-mob_content-anc{
+    @extend .navbar-menu_anchor;
+    font-family: $userfont-reg;
+    font-size: 14px;
+    margin-top: 16px;
+    line-height: 0.9;
+    padding: 0;
+}
+
+.nabvar-mob_cons {
+    font-family: $userfont-med;
+    font-size: 10px;
+    max-width: 160px;
+    font-weight: bold;
+    line-height: auto;
+    margin: 25px 0;
+}
+
+.navbar-mob_cons-fio {
+    font-family: $userfont-lg;
+    margin-top: 8px;
+    line-height: 1.5;
+}
+
+.accordion {
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+}
+
+.accordion-title_text {
+    @extend .navbar-menu_anchor;
+    font-family: $userfont-reg;
+    font-size: 14px;
+    margin-top: 16px;
+    line-height: 0.9;
+    padding: 0;
+    display: inline-block;
+    position: relative;
+}
+
+.accordion-title_sim {
+    display: inline-block;
+    font-size: 12px;
+    transition: transform .5s ease-in;
+}
+
+.dropdown-menu_elem {
+    @extend .navbar-menu_anchor;
+    font-family: $userfont-lg;
+    font-size: 12px;
+    margin-top: 12px;
+    line-height: 0.9;
+    padding: 0;
+    text-decoration: none;
+}
+
+.test {
+    transform: rotate(180deg);
+}
+
+.slide-left {
+	 animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.slide-back-left {
+    animation: slide-back-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-left {
+    0% {
+              transform: translateX(100px);
+    }
+    100% {
+              transform: translateX(0px);
+    }
+  }
+
+@keyframes slide-back-left {
+    0% {
+              transform: translateX(0px);
+    }
+    100% {
+              transform: translateX(-100px);
+    }
+}
+
+.navbar-sm {
+    width: 100%;
+    display: flex;
+    height: 110px;
+    padding: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-phone {
+    width: 20px;
+    height: 20px;
+}
+
+.navbar-button_menu {
+    margin-left: 20px;
+    width: 30px;
+    height: 23px;
+}
+
+.navbar-logo {
+    width: 70px;
+}
+
+.scale-out-ver-bottom {
+	animation: scale-out-ver-bottom 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+.scale-in-ver-top {
+	animation: scale-in-ver-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes scale-out-ver-bottom {
+    0% {
+      transform: scaleY(1);
+      transform-origin: 0% 100%;
+      opacity: 1;
+    }
+    100% {
+      transform: scaleY(0);
+      transform-origin: 0% 100%;
+      opacity: 1;
+    }
+  }
+
+@keyframes scale-in-ver-top {
+0% {
+    transform: scaleY(0);
+    transform-origin: 100% 0%;
+    opacity: 1;
+}
+100% {
+    transform: scaleY(1);
+    transform-origin: 100% 0%;
+    opacity: 1;
+}
+}
